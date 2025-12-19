@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f8;
+    color: #2c3e50;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* DARK MODE */
+body.dark {
+    background: #1e1e1e;
+    color: #ecf0f1;
+}
+/* Add this inside your styles.css file */
+
+body.dark .day {
+    background: #333; /* A darker background for the day boxes */
+    color: #ecf0f1;   /* Ensure the text is light (optional, as it inherits this) */
+}
+body.dark .task-card {
+    background: #2c2c2c;
+}
+
+body.dark input,
+body.dark select {
+    background: #333;
+    color: white;
+    border-color: #555;
+}
+
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    max-width: 900px; /* Match with form width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.dark-toggle {
+    margin-left: 10px;
+    padding: 10px 15px; /* Add more padding */
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: auto; /* Allow natural width */
+}
+
+/* PROGRESS */
+.progress-container {
+    background: #ddd;
+    height: 8px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #2ecc71;
+    width: 0;
+    border-radius: 10px;
+    transition: width 0.5s;
+}
+
+/* FORM */
+.task-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 50px; /* Set fixed width for button column */
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 900px; /* Limit the maximum width */
+    margin-left: auto;
+    margin-right: auto; /* Center the form */
+}
+
+.task-form input,
+.task-form select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.task-form button {
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    width: 50px;  /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center the button */
+}
+
+/* FILTERS */
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filters a {
+    margin: 0 7px; /* Equal margin on both sides */
+    color: #3498db;
+    font-weight: 600;
+    padding: 5px 15px; /* Add padding to make them more button-like */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.filters a:hover {
+    background-color: #e3f2fd;
+}
+
+/* WEEK VIEW */
+.week-view {
+    display: flex;
+    gap: 6px;
+    margin: 20px auto;
+    max-width: 900px; /* Match with other elements */
+}
+
+.day {
+    flex: 1;
+    background: #ecf0f1;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* TASK LIST */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* TASK CARD */
+.task-card {
+    background: white;
+    color: inherit;
+    padding: 16px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* COMPLETED */
+.task-card.done {
+    background: #eafaf1;
+    color: #7f8c8d;
+    text-decoration: line-through;
+}
+
+/* OVERDUE */
+.task-card.overdue {
+    border-left-color: #e74c3c !important;
+    background: #fdecea;
+}
+
+/* CONTENT */
+.task-left {
+    display: flex;
+    gap: 12px;
+}
+
+.task-text {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* META */
+.task-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #ddd;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.priority {
+    color: white;
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.p1 { background: #2ecc71; }
+.p2 { background: #f1c40f; }
+.p3 { background: #e74c3c; }
+
+.due {
+    font-size: 0.75rem;
+    color: #555;
+}
+
+.delete {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    padding: 5px 10px; /* Add padding */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.delete:hover {
+    background-color: #ffebee;
+}
+
+/* EMPTY */
+.empty {
+    text-align: center;
+    margin-top: 40px;
+    color: #aaa;
+}
