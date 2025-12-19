@@ -4,13 +4,13 @@ from datetime import datetime
 import os
 
 app = Flask(__name__)
-# It's better to set a fixed secret key for development
+
 app.config["SECRET_KEY"] = "a_very_secret_key" 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///test.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
-# --- Models (No changes here) ---
+# --- Models  ---
 class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False, unique=True)
@@ -132,7 +132,7 @@ def update(id):
             flash(f"There was an issue updating your task: {str(e)}", "error")
             return redirect(request.referrer)
     else:
-        # *** FIX IS HERE ***
+        
         # Get filter parameters to maintain state on the page
         category_filter = request.args.get("category", "all")
         completed_filter = request.args.get("completed", "all")
