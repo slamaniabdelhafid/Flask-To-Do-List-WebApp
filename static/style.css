@@ -15,11 +15,11 @@ body.dark {
     background: #1e1e1e;
     color: #ecf0f1;
 }
-/* Add this inside your styles.css file */
+
 
 body.dark .day {
-    background: #333; /* A darker background for the day boxes */
-    color: #ecf0f1;   /* Ensure the text is light (optional, as it inherits this) */
+    background: #333; 
+    color: #ecf0f1;   
 }
 body.dark .task-card {
     background: #2c2c2c;
@@ -37,7 +37,7 @@ body.dark select {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
-    max-width: 900px; /* Match with form width */
+    max-width: 900px; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -51,11 +51,11 @@ body.dark select {
 
 .dark-toggle {
     margin-left: 10px;
-    padding: 10px 15px; /* Add more padding */
+    padding: 10px 15px; 
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    width: auto; /* Allow natural width */
+    width: auto; 
 }
 
 /* PROGRESS */
@@ -77,12 +77,12 @@ body.dark select {
 /* FORM */
 .task-form {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 50px; /* Set fixed width for button column */
+    grid-template-columns: 2fr 1fr 1fr 1fr 50px; 
     gap: 10px;
     margin-bottom: 20px;
-    max-width: 900px; /* Limit the maximum width */
+    max-width: 900px; 
     margin-left: auto;
-    margin-right: auto; /* Center the form */
+    margin-right: auto; 
 }
 
 .task-form input,
@@ -98,12 +98,12 @@ body.dark select {
     border: none;
     border-radius: 8px;
     font-size: 1.5rem;
-    width: 50px;  /* Set a fixed width */
-    height: 50px; /* Set a fixed height */
+    width: 50px;  
+    height: 50px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Center the button */
+    margin: 0 auto; 
 }
 
 /* FILTERS */
@@ -114,10 +114,10 @@ body.dark select {
 }
 
 .filters a {
-    margin: 0 7px; /* Equal margin on both sides */
+    margin: 0 7px; 
     color: #3498db;
     font-weight: 600;
-    padding: 5px 15px; /* Add padding to make them more button-like */
+    padding: 5px 15px; 
     border-radius: 5px;
     transition: background-color 0.3s;
 }
@@ -131,7 +131,7 @@ body.dark select {
     display: flex;
     gap: 6px;
     margin: 20px auto;
-    max-width: 900px; /* Match with other elements */
+    max-width: 900px; 
 }
 
 .day {
@@ -216,7 +216,7 @@ body.dark select {
 .delete {
     font-size: 1.2rem;
     color: #e74c3c;
-    padding: 5px 10px; /* Add padding */
+    padding: 5px 10px; 
     border-radius: 5px;
     transition: background-color 0.3s;
 }
